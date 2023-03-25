@@ -8,7 +8,7 @@ class TestBooksCollector:
             [ [ 'Послемрак', '1Q84' ], 2 ]
         ]
     )
-    def test_add_new_book_multiple_count_equals(self, books_collector, names, expected_count):
+    def test_add_new_book(self, books_collector, names, expected_count):
         for name in names:
             books_collector.add_new_book(name)
 
@@ -18,7 +18,7 @@ class TestBooksCollector:
 
         assert books_count == expected_count, f'Expected count of books in rating: {expected_count}, got: {books_count}'
 
-    def test_add_new_book_twice_count_equals_one(self, books_collector):
+    def test_add_new_book_same(self, books_collector):
         name = 'Щегол'
 
         books_collector.add_new_book(name)
@@ -31,7 +31,7 @@ class TestBooksCollector:
 
         assert books_count == expected_count, f'Expected count of books in rating: {expected_count}, got: {books_count}'
 
-    def test_set_book_rating_not_added_not_changed(self, books_collector):
+    def test_set_book_rating_not_added(self, books_collector):
         added_name = 'Щегол'
         books_collector.add_new_book(added_name)
 
@@ -50,7 +50,7 @@ class TestBooksCollector:
             11
         ]
     )
-    def test_set_book_rating_out_of_bound_not_changed(self, books_collector, wrong_rating):
+    def test_set_book_rating_out_of_bound(self, books_collector, wrong_rating):
         name = 'Щегол'
 
         books_collector.add_new_book(name)
@@ -60,7 +60,7 @@ class TestBooksCollector:
 
         assert book_rating is not wrong_rating, f'Book {name} added with the wrong rating {wrong_rating}'
 
-    def test_get_book_rating_not_added_is_none(self, books_collector):
+    def test_get_book_rating_not_added(self, books_collector):
         name = 'Щегол'
 
         book_rating = books_collector.get_book_rating(name)
@@ -74,7 +74,7 @@ class TestBooksCollector:
             [ [ 'Послемрак', '1Q84' ], 2 ]
         ]
     )
-    def test_add_book_in_favorites_multiple_count_equals(self, books_collector, names, expected_count):
+    def test_add_book_in_favorites(self, books_collector, names, expected_count):
         for name in names:
             books_collector.add_new_book(name)
             books_collector.add_book_in_favorites(name)
@@ -85,7 +85,7 @@ class TestBooksCollector:
 
         assert books_count == expected_count, f'Expected count of favorite books: {expected_count}, got: {books_count}'
 
-    def test_add_book_in_favorites_not_added_not_found(self, books_collector):
+    def test_add_book_in_favorites_not_added(self, books_collector):
         name = 'Щегол'
 
         books_collector.add_book_in_favorites(name)
@@ -96,7 +96,7 @@ class TestBooksCollector:
         assert name not in books_rating, f'Book {name} must not be in books rating, because it was not added'
         assert name not in favorite_books, f'Book {name} must not be in favorites, because it was not added'
 
-    def test_delete_book_from_favorites_not_found(self, books_collector):
+    def test_delete_book_from_favorites(self, books_collector):
         name = 'Щегол'
 
         books_collector.add_new_book(name)
