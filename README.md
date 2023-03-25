@@ -27,22 +27,25 @@
         <summary>Вывод должен быть следующим...</summary>
 
     ```bash
-    ============================= test session starts ==============================
+    ============================= test session starts =============================
     ...
-    tests.py::TestBooksCollector::test_add_new_book_multiple_count_equals[names0-1] PASSED [  8%]
-    tests.py::TestBooksCollector::test_add_new_book_multiple_count_equals[names1-2] PASSED [ 16%]
-    tests.py::TestBooksCollector::test_add_new_book_twice_count_equals_one PASSED [ 25%]
-    tests.py::TestBooksCollector::test_set_book_rating_not_added_not_changed PASSED [ 33%]
-    tests.py::TestBooksCollector::test_set_book_rating_out_of_bound_not_changed[-1] PASSED [ 41%]
-    tests.py::TestBooksCollector::test_set_book_rating_out_of_bound_not_changed[0] PASSED [ 50%]
-    tests.py::TestBooksCollector::test_set_book_rating_out_of_bound_not_changed[11] PASSED [ 58%]
-    tests.py::TestBooksCollector::test_get_book_rating_not_added_is_none PASSED [ 66%]
-    tests.py::TestBooksCollector::test_add_book_in_favorites_multiple_count_equals[names0-1] PASSED [ 75%]
-    tests.py::TestBooksCollector::test_add_book_in_favorites_multiple_count_equals[names1-2] PASSED [ 83%]
-    tests.py::TestBooksCollector::test_add_book_in_favorites_not_added_not_found PASSED [ 91%]
-    tests.py::TestBooksCollector::test_delete_book_from_favorites_not_found PASSED [100%]
 
-    ============================== 12 passed in 0.02s ==============================
+    collecting ... collected 12 items
+
+    tests.py::TestBooksCollector::test_add_new_book[names0-1] PASSED         [  8%]
+    tests.py::TestBooksCollector::test_add_new_book[names1-2] PASSED         [ 16%]
+    tests.py::TestBooksCollector::test_add_new_book_same PASSED              [ 25%]
+    tests.py::TestBooksCollector::test_set_book_rating_not_added PASSED      [ 33%]
+    tests.py::TestBooksCollector::test_set_book_rating_out_of_bound[-1] PASSED [ 41%]
+    tests.py::TestBooksCollector::test_set_book_rating_out_of_bound[0] PASSED [ 50%]
+    tests.py::TestBooksCollector::test_set_book_rating_out_of_bound[11] PASSED [ 58%]
+    tests.py::TestBooksCollector::test_get_book_rating_not_added PASSED      [ 66%]
+    tests.py::TestBooksCollector::test_add_book_in_favorites[names0-1] PASSED [ 75%]
+    tests.py::TestBooksCollector::test_add_book_in_favorites[names1-2] PASSED [ 83%]
+    tests.py::TestBooksCollector::test_add_book_in_favorites_not_added PASSED [ 91%]
+    tests.py::TestBooksCollector::test_delete_book_from_favorites PASSED     [100%]
+   
+    ============================= 12 passed in 0.03s ==============================
     ```
 
     </details>
