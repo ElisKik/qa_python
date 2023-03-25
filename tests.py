@@ -4,8 +4,8 @@ class TestBooksCollector:
     @pytest.mark.parametrize(
         'names, expected_count',
         [
-            [ [ 'Щегол' ], 1 ],
-            [ [ 'Послемрак', '1Q84' ], 2 ]
+            (['Щегол'], 1),
+            (['Послемрак', '1Q84'], 2)
         ]
     )
     def test_add_new_book(self, books_collector, names, expected_count):
@@ -70,8 +70,8 @@ class TestBooksCollector:
     @pytest.mark.parametrize(
         'names, expected_count',
         [
-            [ [ 'Щегол' ], 1 ],
-            [ [ 'Послемрак', '1Q84' ], 2 ]
+            (['Щегол'], 1),
+            (['Послемрак', '1Q84'], 2)
         ]
     )
     def test_add_book_in_favorites(self, books_collector, names, expected_count):
