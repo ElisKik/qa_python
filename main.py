@@ -1,6 +1,4 @@
-# класс для работы с книгами
 class BooksCollector:
-
     def __init__(self):
         self.books_rating = {}
         self.favorites = []
